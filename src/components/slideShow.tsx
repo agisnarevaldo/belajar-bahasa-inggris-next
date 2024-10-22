@@ -1,12 +1,8 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-
-// Import modul yang dibutuhkan
+import {Swiper, SwiperRef, SwiperSlide} from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
-
-// Import CSS Swiper
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -23,8 +19,8 @@ interface SlideshowProps {
 }
 
 const Slideshow: React.FC<SlideshowProps> = ({ slides }) => {
-    const [currentIndex, setCurrentIndex] = useState(0);
-    const swiperRef = useRef<Swiper>(null);
+    const [, setCurrentIndex] = useState(0); // Gunakan ini jika Anda butuh currentIndex
+    const swiperRef = useRef<SwiperRef>(null); // Perbaikan di sini
 
     useEffect(() => {
         const swiper = swiperRef.current;
@@ -52,10 +48,9 @@ const Slideshow: React.FC<SlideshowProps> = ({ slides }) => {
         const indonesiaText = slide.indonesiaText;
 
         speak(englishText, 'en-US');
-        // Memberi jeda sebelum membaca teks bahasa Indonesia
         setTimeout(() => {
             speak(indonesiaText, 'id-ID');
-        }, 2000); // Jeda 3 detik
+        }, 2000); // Jeda 2 detik
     };
 
     const speak = (text: string, lang: string) => {
@@ -70,8 +65,8 @@ const Slideshow: React.FC<SlideshowProps> = ({ slides }) => {
             modules={[Navigation, Pagination, Autoplay]}
             navigation
             pagination={{ clickable: true }}
-            autoplay={{ delay: 5000 }} // Ganti slide setiap 5 detik
-            onSwiper={(swiper) => console.log(swiper)} // Ini akan menampilkan instance Swiper
+            autoplay={{ delay: 5000 }}
+            onSwiper={(swiper) => console.log(swiper)}
             onSlideChange={() => console.log('slide change')}
         >
             {slides.map((slide, index) => (
