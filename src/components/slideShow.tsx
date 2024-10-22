@@ -56,7 +56,11 @@ const Slideshow: React.FC<SlideshowProps> = ({ slides }) => {
     const speak = (text: string, lang: string) => {
         const utterance = new SpeechSynthesisUtterance(text);
         utterance.lang = lang;
-        speechSynthesis.speak(utterance);
+        try {
+            speechSynthesis.speak(utterance);
+        } catch (error) {
+            console.error('Error saat memutar suara:', error);
+        }
     };
 
     return (
