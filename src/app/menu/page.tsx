@@ -1,8 +1,6 @@
 "use client";
 
 import {useEffect} from "react";
-import Image from "next/image";
-import Button from "@/components/ui/button";
 import CardMenu from "@/components/ui/cardMenu";
 
 export default function Page() {
