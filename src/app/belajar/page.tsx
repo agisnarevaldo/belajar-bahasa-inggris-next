@@ -31,6 +31,26 @@ const slides = [
         englishText: 'Truck',
         indonesiaText: 'Truk',
     },
+    {
+        image: '/vehicle/bicycle.png',
+        englishText: 'Bicycle',
+        indonesiaText: 'Sepeda',
+    },
+    {
+        image: '/vehicle/motorcycle.png',
+        englishText: 'Motorcycle',
+        indonesiaText: 'Motor',
+    },
+    {
+        image: '/vehicle/airplane.png',
+        englishText: 'Airplane',
+        indonesiaText: 'Pesawat Terbang',
+    },
+    {
+        image: '/vehicle/boat.png',
+        englishText: 'Boat',
+        indonesiaText: 'Perahu',
+    },
 ];
 
 export default function Page() {
