@@ -13,7 +13,7 @@ export default function Page() {
         }, 500);
     }, []); // usseEffect hanya dijalankan sekali setelah render pertama
     return (
-        <div className="bg-blue-400 min-h-screen flex flex-wrap items-center justify-center gap-6">
+        <div className="min-h-screen flex flex-wrap items-center justify-center gap-6">
             <CardMenu image="/belajar.png" href="/belajar" txt="Belajar" />
             <CardMenu image="/bermain.png" href="/bermain" txt="Bermain" />
             <CardMenu image="/bernyanyi.png" href="/bernyanyi" txt="Bernyanyi" />
