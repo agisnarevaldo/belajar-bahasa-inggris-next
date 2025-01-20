@@ -55,7 +55,7 @@ const slides = [
 
 export default function Page() {
     return (
-        <div className="">
+        <div className="bg-red-400">
             <GoBack href={'/menu'} classname="z-50" />
             <Slideshow slides={slides} />
         </div>
