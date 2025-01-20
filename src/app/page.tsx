@@ -4,7 +4,7 @@ import Button from "@/components/ui/button";
 export default function Home() {
     return (
         <div className="flex flex-col min-h-screen">
-            <div className=" absolute bottom-0 w-full">
+            <div className="absolute bottom-0 w-full">
                 <Button
                     href="/menu"
                     classname="absolute left-1/2 -translate-x-1/2 top-1/3 mx-auto w-max z-50"
