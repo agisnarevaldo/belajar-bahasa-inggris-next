@@ -114,9 +114,9 @@ const GuessTheSound: React.FC = () => {
         <div className="flex flex-col justify-center min-h-screen gap-20 text-center">
 
             <div className="text-black absolute left-1/2 -translate-x-1/2 top-5">
-                <h1 className="text-2xl font-semibold">Tebak Suara Kendaraan</h1>
+                <h1 className="text-3xl font-bold">Tebak Suara Kendaraan</h1>
                 <div
-                    className={`text-lg font-semibold bg-neutral-200 py-4 rounded-lg ${
+                    className={`text-xl font-semibold bg-neutral-200 py-4 rounded-lg ${
                         isCorrect === true ? 'text-green-500' : isCorrect === false ? 'text-red-500' : 'text-black'
                     }`}
                 >
@@ -143,7 +143,7 @@ const GuessTheSound: React.FC = () => {
             {isCorrect && (
                 <button
                     onClick={nextSlide}
-                    className="bg-[#A1FF14] text-[#131313] px-4 py-2 rounded-lg w-max mx-auto absolute bottom-20 left-1/2 -translate-x-1/2 border-none shadow-[5px_5px_10px_rgba(0,0,0,0.116)] transition-transform duration-200 cursor-pointer hover:bg-[#C0FF14] active:scale-95"
+                    className="bg-[#A1FF14] text-[#131313] px-4 py-4 rounded-lg w-max mx-auto absolute bottom-20 left-1/2 -translate-x-1/2 border-none shadow-[5px_5px_10px_rgba(0,0,0,0.116)] transition-transform duration-200 cursor-pointer hover:bg-[#C0FF14] active:scale-95"
                 >
                     <Icon icon="fluent:next-24-filled"/>
                 </button>
