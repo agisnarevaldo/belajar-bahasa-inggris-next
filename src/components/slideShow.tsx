@@ -83,9 +83,9 @@ const Slideshow: React.FC<SlideshowProps> = ({ slides }) => {
                             height={500}
                             className="mx-auto"
                         />
-                        <div className="bg-neutral-100 p-4 w-1/4 text-center rounded-xl">
-                            <h3 className="text-2xl font-bold text-red-600">{slide.englishText}</h3>
-                            <p className="text-black">{slide.indonesiaText}</p>
+                        <div className="p-4 w-1/4 text-center rounded-xl">
+                            <h3 className="text-4xl font-bold text-green-400 underline">{slide.englishText}</h3>
+                            <p className="text-neutral-50 text-4xl">{slide.indonesiaText}</p>
                         </div>
                     </div>
                 </SwiperSlide>
